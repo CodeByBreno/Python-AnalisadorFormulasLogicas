@@ -6,6 +6,8 @@
 
 from tkinter import *;
 from tkinter import ttk;
+from ctypes import windll
+windll.shcore.SetProcessDpiAwareness(1); #tirado do StackOverFlow, serve para ajustar a resolução da janela
 
 paleta_cor = "Modo Escuro";
 valido = False;
@@ -283,7 +285,7 @@ def gerar_tabela_verdade(entrada):
 #Construindo a Janela principal ------------------------------------------------------------------------------------------------
 janela = Tk()
 janela.title("Testador de Fórmulas Lógicas");
-janela.geometry("1080x700");
+janela.geometry("1200x800");
 #bg = PhotoImage(file = r"H:\Breno Gabriel\Desktop\Projetos Pessoais\Aulas - 8º Periodo\Analisar_formula_logica\imagens\background.jpg");
 
 cabecalho = Frame(janela);
